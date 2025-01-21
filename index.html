@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <h2 class="title">QR Code Generator</h2>
+    <h3 class="slogan">Create your QR Code in three simple steps</h3>
+
+    <section id="steps">
+        <div class="steps-wrapper">
+            <div class="steps-container">
+                <div class="details-container">
+                    <img src="assets/step1.png" alt="Step 1" class="step1-img">
+                </div>
+                <h2 class="step1-subtitle">Create your QR Code content</h2>
+                <h3 class="step1-description">Enter the text or URL you want to encode into the QR code</h3>
+            </div>
+
+            <div class="arrow1">
+                <div class="arrow-details">
+                    <img src="assets/stepbtn.png" alt="step button">
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="details-container">
+                    <img src="assets/step2.png" alt="Step 2" class="step2-img">
+                </div>
+                <h2 class="step2-subtitle">Generate your QR Code</h2>
+                <h3 class="step2-description">Click the "Generate QR Code" button to create your QR code</h3>
+            </div>
+
+            <div class="arrow1">
+                <div class="arrow-details">
+                    <img src="assets/stepbtn.png" alt="step button">
+                </div>
+            </div>
+
+            <div class="steps-container">
+                <div class="details-container">
+                    <img src="assets/step3.png" alt="Step 3" class="step3-img">
+                </div>
+                <h2 class="step3-subtitle">Save your QR Code</h2>
+                <h3 class="step3-description">Click the "Save QR Code" button to download your QR code as an image</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="qr-code-generator">
+        <div class="input-container">
+            <!-- Input field for user to enter text or URL -->
+            <input type="text" id="qr-code-value" placeholder="Enter text or URL">
+
+            <!-- Button to trigger QR code generation -->
+            <button class="btn-grad" onclick="generateQRCode()">Generate QR Code</button>
+        </div> 
+    </section>
+
+    <div id="qr-code-container">
+        <!-- Image element to display the QR code -->
+        <img id="qr-code-image" alt="QR Code will appear here" style="display: none;">
+
+        <!-- Save QR Code Button, initially hidden -->
+        <button id="save-qr-code-btn" class="save-btn" onclick="saveQRCode()" style="display: none;">Save QR Code</button>
+
+    </div>
+    
+    <!-- QRious library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
